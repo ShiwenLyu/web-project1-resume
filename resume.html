@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lucy's resume</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #D6E8ED;
+      }
+      .container {
+        display: grid;
+        width: 1200px;
+        height: 1689px;
+        background-color: white;
+
+        /*         			 center the whole page */
+        margin: 0 auto;
+        /*			 create 12 columns equal width*/
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 300px 260px 150x 440px 215px 324px;
+        /* anything outside container will be clipped */
+      }
+      .top {
+        grid-column: 1/12;
+        grid-row: 1/2;
+      }
+      div {
+        position: relative;
+        box-sizing: border-box;
+        padding: 80px;
+      }
+
+      h1 {
+        font-family: "Raleway", sans-serif;
+        font-weight: bold;
+        font-size: 36px;
+        letter-spacing: 3px;
+      }
+      h2 {
+        font-family: "Raleway", sans-serif;
+        font-weight: bold;
+        font-size: 24px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+      }
+      p {
+        font-family: "Raleway", sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+      }
+
+      .top {
+        grid-column: 1/12;
+        grid-row: 1/2;
+      }
+
+      .top p {
+        text-align: left;
+        margin-top: 40px;
+        line-height: 25px;
+      }
+      .ps {
+        grid-column: 1/12;
+        grid-row: 2/3;
+      }
+      .ps h2 {
+        margin-top: 40px;
+      }
+      .ps p {
+        grid-column: 1/12;
+        text-align: justify;
+        line-height: 24px;
+      }
+
+      .ps hr {
+        height: 7px;
+        border-width: 0px;
+        width: 60px;
+        background-color: #2d2a2b;
+        margin-top: -180px;
+        margin-left: 0px;
+      }
+
+      .education {
+        grid-column: 1/12;
+        grid-row: 3/4;
+      }
+      .line1 {
+        height: 1px;
+        width: 1020px;
+        background-color: #e6e6e6;
+        margin-top: -180px;
+      }
+      .block1 {
+        height: 7px;
+
+        width: 60px;
+        background-color: #2d2a2b;
+        margin-top: -15px;
+        margin-left: 0px;
+      }
+      .education h2 {
+        margin-top: 30px;
+      }
+
+      .time1 {
+        grid-column: 4/6;
+        grid-row: 3/4;
+        font-family: "Raleway", sans-serif;
+        font-weight: bold;
+        margin-top: -65px;
+        margin-right: 10px;
+        text-align: right;
+      }
+      .mica {
+        grid-column: 6/12;
+        grid-row: 3/4;
+        font-family: "Raleway", sans-serif;
+        font-weight: bold;
+        letter-spacing: 0.2px;
+        margin-left: 30px;
+        margin-top: -65px;
+      }
+
+      .bachelor {
+        grid-column: 6/12;
+        grid-row: 3/4;
+        font-family: "Raleway", sans-serif;
+        font-weight: 400;
+        letter-spacing: 0.25px;
+        margin-left: 30px;
+        margin-top: -35px;
+      }
+      .experience {
+        grid-column: 1/12;
+        grid-row: 4/5;
+      }
+      .line2 {
+        grid-column: 1/12;
+        grid-row: 4/5;
+        height: 1px;
+        width: 1020px;
+        background-color: #e6e6e6;
+        margin-top: -250px;
+      }
+      .block2 {
+        grid-column: 1/12;
+        grid-row: 4/5;
+        height: 7px;
+        width: 60px;
+        background-color: #2d2a2b;
+        margin-left: 0px;
+        margin-top: -15px;
+      }
+      .experience h2 {
+        margin-top: 30px;
+        letter-spacing: 5px;
+      }
+      .time2 {
+        grid-column: 4/6;
+        grid-row: 4/5;
+        font-family: "Raleway", sans-serif;
+        font-weight: bold;
+        margin-top: -135px;
+        margin-right: 10px;
+        line-height: 29px;
+        text-align: right;
+      }
+      .panopath {
+        grid-column: 6/12;
+        grid-row: 4/5;
+        font-family: "Raleway", sans-serif;
+        font-weight: bold;
+        letter-spacing: 0px;
+        margin-left: 30px;
+        margin-top: -130px;
+      }
+      .Panopath-content {
+        grid-column: 6/12;
+        grid-row: 4/5;
+        font-family: "Raleway", sans-serif;
+        font-weight: 400;
+        letter-spacing: 0.25px;
+        margin-left: 30px;
+        margin-top: -100px;
+        text-align: justify;
+        line-height: 24px;
+      }
+      .time3 {
+        grid-column: 4/6;
+        grid-row: 4/5;
+        font-family: "Raleway", sans-serif;
+        font-weight: bold;
+        margin-top: 60px;
+        line-height: 29px;
+        margin-right: 10px;
+        text-align: right;
+      }
+      .Sokat {
+        grid-column: 6/12;
+        grid-row: 4/5;
+        font-family: "Raleway", sans-serif;
+        font-weight: bold;
+        letter-spacing: -0.2px;
+        margin-left: 30px;
+        margin-top: 65px;
+      }
+      .Sokat-content {
+        grid-column: 6/12;
+        grid-row: 4/5;
+        font-family: "Raleway", sans-serif;
+        font-weight: 400;
+        letter-spacing: 0.25px;
+        margin-left: 30px;
+        margin-top: 100px;
+        text-align: left;
+        line-height: 24px;
+      }
+      .skills {
+        grid-column: 1/12;
+        grid-row: 5/6;
+      }
+      .line3 {
+        grid-column: 1/12;
+        grid-row: 5/6;
+        height: 1px;
+        width: 1020px;
+        background-color: #e6e6e6;
+        margin-top: -95px;
+      }
+
+      .block3 {
+        grid-column: 1/12;
+        grid-row: 5/6;
+        height: 7px;
+        width: 60px;
+        background-color: #2d2a2b;
+        margin-left: 0px;
+        margin-top: -15px;
+      }
+      .skills h2 {
+        margin-top: 30px;
+        letter-spacing: 5px;
+      }
+      .software {
+        grid-column: 6/10;
+        grid-row: 5/6;
+        font-family: "Raleway", sans-serif;
+        font-weight: bold;
+        letter-spacing: -0.2px;
+        margin-left: 30px;
+        margin-top: 15px;
+        letter-spacing: 1.2px;
+      }
+      .software-content {
+        grid-column: 6/10;
+        padding: 40px;
+        grid-row: 5/6;
+        text-align: left;
+        line-height: 24px;
+        margin-top: 0px;
+        etter-spacing: 1.2px;
+        margin-left: -10px;
+      }
+      .adwards {
+        grid-column: 1/12;
+        grid-row: 6/7;
+      }
+      .line4 {
+        grid-column: 1/12;
+        grid-row: 6/7;
+        height: 1px;
+        width: 1020px;
+        background-color: #e6e6e6;
+        margin-top: -140px;
+      }
+      .block4 {
+        grid-column: 1/12;
+        grid-row: 5/6;
+        height: 7px;
+        width: 60px;
+        background-color: #2d2a2b;
+        margin-left: 0px;
+        margin-top: -15px;
+      }
+      .adwards h2 {
+        margin-top: 30px;
+        letter-spacing: 5px;
+      }
+      .Scholarship {
+        grid-column: 6/10;
+        grid-row: 6/7;
+        font-family: "Raleway", sans-serif;
+        font-weight: bold;
+        letter-spacing: -0.2px;
+        margin-left: 30px;
+        margin-top: -25px;
+        letter-spacing: 0.5px;
+      }
+      .Scholarship-content {
+        grid-column: 6/12;
+        padding: 40px;
+        grid-row: 6/7;
+        text-align: left;
+        line-height: 24px;
+        margin-top: -43px;
+        etter-spacing: px;
+        margin-left: -10px;
+      }
+      .Dean {
+        grid-column: 6/10;
+        grid-row: 6/7;
+        font-family: "Raleway", sans-serif;
+        font-weight: bold;
+        letter-spacing: -0.2px;
+        margin-left: 30px;
+        margin-top: 45px;
+        letter-spacing: 0.5px;
+      }
+      .Dean-content {
+        grid-column: 6/12;
+        padding: 40px;
+        grid-row: 6/7;
+        text-align: left;
+        line-height: 24px;
+        margin-top: 27px;
+        etter-spacing: px;
+        margin-left: -10px;
+      }
+      .ICAD {
+        grid-column: 6/12;
+        grid-row: 6/7;
+        font-family: "Raleway", sans-serif;
+        font-weight: bold;
+        margin-left: 30px;
+        margin-top: 113px;
+      }
+      .ICAD-content {
+        grid-column: 6/12;
+        grid-row: 6/7;
+        text-align: left;
+        padding: 40px;
+        line-height: 24px;
+        margin-top: 95px;
+        letter-spacing: px;
+        margin-left: -10px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <div class="top">
+        <h1>Shiwen Lyu</h1>
+        <p>
+          1020 Park Ave, Baltimore, Maryland, 21201<br />
+          https://www.instagram.com/lswlucy/<br />
+          slyu01@mica.edu<br />
+          +1 4109348821
+        </p>
+      </div>
+      <div class="ps">
+        <hr />
+        <h2 class="personal-statement">
+          PROFESSIONAL STATEMENT
+        </h2>
+        <p>
+          I am Shiwen Lyu, currently earning Bachelor of Fine Arts in Graphic
+          Design at the MICA(Maryland Institute College of Art). I am interested
+          in motion graph-ics and packaging design and enjoy challenging work.
+          In many of my designs, I design a style based on the frame and central
+          concept of the work itself. In the future study, I would like to try
+          various media to expand my graphic design, and also explore more
+          possibilities of it.
+        </p>
+      </div>
+
+      <div class="education">
+        <hr class="line1" />
+        <hr class="block1" />
+        <h2>
+          EDUCATION
+        </h2>
+      </div>
+      <p class="time1">
+        2018-2021
+      </p>
+      <p class="mica">
+        Maryland institute college of art
+      </p>
+      <p class="bachelor">
+        Bachelor of arts in graphic design
+      </p>
+
+      <div class="experience">
+        <hr class="line2" />
+        <hr class="block2" />
+        <h2>
+          work<br />
+          experience
+        </h2>
+      </div>
+      <p class="time2">
+        10/Jan-2020<br />
+        5/May-2020
+      </p>
+      <p class="panopath">
+        Graphic Desginer/Official Accounts: Panopath
+      </p>
+      <p class="Panopath-content">
+        Corporate publicity and promotion, including offline publicity and new
+        media graphic design work.<br />
+        Marketing activities of material design, publicity picture design,
+        atmosphere design, etc.
+      </p>
+      <p class="time3">
+        1/Jan-2021<br />
+        23/Apr-2021
+      </p>
+      <p class="Sokat">
+        UX Designer/Sokat Virtual Currency Consulting company
+      </p>
+      <p class="Sokat-content">
+        Work closely with product managers, visual designers, and developers to
+        design the brand according to product requirements.<br />
+        Responsible for interaction design including task flow, data analysis,
+        information architecture layout, etc.<br />
+        Promote experience design in line with the scene/business balance,
+        design reasonable and optimized website design.
+      </p>
+      <div class="skills">
+        <hr class="line3" />
+        <hr class="block3" />
+        <h2>
+          SKILLS
+        </h2>
+      </div>
+      <p class="software">
+        Software
+      </p>
+      <p class="software-content">
+        Adobe Photoshop CC, Adobe Illustrator CC, Adobe Indesign CC, Adobe After
+        Effects, Adobe Lightroom, Adobe PremierPro, Adobe XD, Google Suite,
+        Invision, Microsoft Suite.
+      </p>
+      <div class="adwards">
+        <hr class="line4" />
+        <hr class="block4" />
+        <h2>
+          awards
+        </h2>
+      </div>
+      <p class="Scholarship">
+        Competitive Scholarship
+      </p>
+      <p class="Scholarship-content">
+        2019 - 2020 Maryland College Institute of Art
+      </p>
+      <p class="Dean">
+        Dean's List
+      </p>
+      <p class="Dean-content">
+        2018 - 2020 Maryland College Institute of Art
+      </p>
+      <p class="ICAD">
+        International Contemporary Youth Art Design Competition Finalist
+      </p>
+      <p class="ICAD-content">
+        2021, International Youth Art and Design Association, China
+      </p>
+    </main>
+  </body>
+</html>
